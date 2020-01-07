@@ -40,6 +40,7 @@ def apply_coupons(cart, coupons)
     puts new_item
     puts coupons[i][:num]
     if new_item && new_item[:count] >= coupons[i][:num]
+      puts "cool"
       if cart_item_w_coupon
         cart_item_w_coupon[:count] += cart_item_w_coupon[i][:num]
         new_item[:count] -= cart_item_w_coupon[i][:num]
