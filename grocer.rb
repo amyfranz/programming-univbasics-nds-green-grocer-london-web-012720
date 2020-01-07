@@ -55,9 +55,7 @@ def apply_coupons(cart, coupons)
         }
         puts "sick1"
         cart << cart_item_w_coupon
-        puts "sick2"
         new_item[:count] -= coupons[i][:num]
-        puts "sick"
       end
       pp cart
     end
