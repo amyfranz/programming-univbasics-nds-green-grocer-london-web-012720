@@ -84,4 +84,5 @@ def checkout(cart, coupons)
     total_price += item_price
     i += 1 
   end
+  return total_price
 end
