@@ -60,7 +60,9 @@ end
 def apply_clearance(cart)
   i = 0 
   while i < cart.length do
-    
+    if cart[i][:clearance] == true 
+      price = cart[i][:price]
+      price = price / 20 * 100
 end
 
 def checkout(cart, coupons)
