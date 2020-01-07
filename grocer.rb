@@ -55,6 +55,7 @@ def apply_coupons(cart, coupons)
     end
     i += 1
   end
+  puts "hello"
   return cart
 end
 
