@@ -26,9 +26,6 @@ def consolidate_cart(cart)
       }
       new_cart << new_cart_item
     end
-    
-  #   if not_in_cart == true
-  #   end
     i+= 1 
   end
   return new_cart
