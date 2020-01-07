@@ -37,27 +37,20 @@ def apply_coupons(cart, coupons)
     new_item = find_item_by_name_in_collection(coupons[i][:item],cart)
     coup_item_name= "#{coupons[i][:item]} W/COUPON"
     cart_item_w_coupon = find_item_by_name_in_collection(coup_item_name, cart)
-    puts new_item
-    puts coupons[i][:num]
     if new_item && new_item[:count] >= coupons[i][:num]
-      puts "cool"
       if cart_item_w_coupon != nil
         cart_item_w_coupon[:count] += cart_item_w_coupon[i][:num]
         new_item[:count] -= cart_item_w_coupon[i][:num]
-        puts "awesome"
       else
-        puts "sick"
         cart_item_w_coupon = {
           :item => coup_item_name,
           :price => coupons[i][:cost]/coupons[i][:num],
           :clearance => new_item[:clearance],
           :count => coupons[i][:num]
         }
-        puts "sick1"
         cart << cart_item_w_coupon
         new_item[:count] -= coupons[i][:num]
       end
-      pp cart
     end
     i += 1
   end
