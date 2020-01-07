@@ -41,11 +41,12 @@ def apply_coupons(cart, coupons)
     puts coupons[i][:num]
     if new_item && new_item[:count] >= coupons[i][:num]
       puts "cool"
-      if cart_item_w_coupon
+      if cart_item_w_coupon != nil
         cart_item_w_coupon[:count] += cart_item_w_coupon[i][:num]
         new_item[:count] -= cart_item_w_coupon[i][:num]
         puts "awesome"
       else
+        puts "sick"
         cart_item_w_coupon = {
           :item => coup_item_name,
           :price => coupons[i][:cost]/coupons[i][:num],
