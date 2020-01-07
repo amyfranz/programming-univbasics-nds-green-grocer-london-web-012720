@@ -53,7 +53,9 @@ def apply_coupons(cart, coupons)
           :clearance => new_item[:clearance],
           :count => coupons[i][:num]
         }
+        puts "sick1"
         cart << cart_item_w_coupon
+        puts "sick2"
         cart_item[:item] -= coupons[counter][:num]
         puts "sick"
       end
